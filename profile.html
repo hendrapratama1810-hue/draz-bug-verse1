@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>My Profile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{
+    min-height:100vh;
+    background:#050505;
+    color:white;
+    text-align:center;
+    overflow:hidden;
+}
+
+/* BACKGROUND GEOMETRIS */
+.bg{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background:
+        repeating-linear-gradient(
+            45deg,
+            rgba(0,255,150,.18) 0 20px,
+            transparent 20px 40px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            rgba(0,180,255,.12) 0 20px,
+            transparent 20px 40px
+        );
+    filter:blur(16px);
+    animation:bgMove 22s linear infinite;
+}
+@keyframes bgMove{
+    from{background-position:0 0}
+    to{background-position:700px 700px}
+}
+
+/* BACK BUTTON */
+.back{
+    position:fixed;
+    top:14px;
+    left:14px;
+    padding:6px 12px;
+    background:#00ff88;
+    color:black;
+    border-radius:8px;
+    box-shadow:0 0 12px #00ff88;
+    cursor:pointer;
+}
+
+/* AVATAR FOTO */
+.avatar{
+    width:120px;
+    height:120px;
+    margin:80px auto 12px;
+    border-radius:50%;
+    overflow:hidden;
+    background:#000;
+    box-shadow:
+        0 0 15px #00ff88,
+        0 0 35px rgba(0,255,136,.7),
+        inset 0 0 18px rgba(0,255,136,.9);
+}
+.avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="back" onclick="location.href='page2.html'">Back</div>
+
+<!-- GANTI profile.jpg / profile.gif DENGAN FOTO KAMU -->
+<div class="avatar">
+    <img src="profile.jpg" alt="Profile Photo">
+</div>
+
+<h2>DRAZX</h2>
+<p>Expired : (Now - 12/08/2028)</p>
+
+</body>
+</html>
